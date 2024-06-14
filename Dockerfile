@@ -3,7 +3,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim 
-COPY --from=build /target/recctangle-0.0.1-SNAPSHOT.jar recctangle.jar
+COPY --from=build /target/rectangle-0.0.1-SNAPSHOT.jar rectangle.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","recctangle.jar"]
+ENTRYPOINT ["java","-jar","rectangle.jar"]
 
