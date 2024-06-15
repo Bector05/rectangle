@@ -12,7 +12,9 @@
     />
     <style>
       .rectangle-box {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 20px auto;
       }
     </style>
@@ -75,7 +77,9 @@
           <div
             class="rectangle-box"
             th:style="'width:' + ${user.width} + 'px; height:' + ${user.height} + 'px; background-color:' + ${user.color}"
-          ></div>
+          >
+            <span th:text="${user.name}"></span>
+          </div>
         </form>
       </div>
     </div>
